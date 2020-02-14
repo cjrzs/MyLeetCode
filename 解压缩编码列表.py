@@ -22,7 +22,7 @@ class Solution:
         for i in range(len(nums)):
             if i % 2 == 0:
                 for x in range(nums[i]):
-                    new_nums.append(nums[i+1] )
+                    new_nums.append(nums[i+1])
         return new_nums
 
 
