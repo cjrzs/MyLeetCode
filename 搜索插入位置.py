@@ -10,6 +10,7 @@ class Solution:
     """
     基础思路：当数组中的值大于或者等于目标值时候直接返回该值位置，并且break
     设置边界，当数组中最后一个值也小于目标值的时候，直接返回数组长度。
+    题目链接：https://leetcode-cn.com/problems/search-insert-position/
     """
     def searchInsert(self, nums: list, target: int) -> int:
         for i in range(len(nums)):
