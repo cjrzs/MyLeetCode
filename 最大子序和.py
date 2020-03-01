@@ -21,7 +21,7 @@ class Solution:
         tmp = nums[0]
         max_ = tmp
         for i in range(1, len(nums)):
-            if nums[i]+tmp > tmp:
+            if nums[i]+tmp > nums[i]:
                 max_ = max(max_, nums[i]+tmp)
                 tmp = nums[i]+tmp
             else:
