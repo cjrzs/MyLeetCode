@@ -33,10 +33,6 @@ class Solution:
         return res
 
 
-
-
-
-
 if __name__ == '__main__':
     com = Solution()
     print(com.addBinary("11111", "0000"))
