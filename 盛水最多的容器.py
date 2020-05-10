@@ -24,6 +24,16 @@ class Solution:
         return res
 
     def maxArea2(self, height: list) -> int:
+        """
+        双指针：
+        从首尾开始搜索，
+        根据木桶原理装多少水取决于最小的那个木块
+        所以用尾元素减去首元素 乘以  较小的木块就是容器体积了
+        如果较小的木块是首元素 那么首元素就+1，如果是尾元素就-1
+        这样比较出最大的就好了
+        :param height:
+        :return:
+        """
         res = 0
         start = 0
         end = len(height) - 1
