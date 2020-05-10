@@ -8,7 +8,7 @@ coding:utf8
 
 
 class Solution:
-    def maxArea(self, height: list[int]) -> int:
+    def maxArea(self, height: list) -> int:
         """
         暴力法：
         双重循环 直接求出所有可能的容量，取最大值，但是如果数组太大运行时间太长
@@ -22,6 +22,23 @@ class Solution:
                 tmp = min(height[m], height[x]) * (m-x)
                 res = max(tmp, res)
         return res
+
+    def maxArea2(self, height: list) -> int:
+        res = 0
+        start = 0
+        end = len(height) - 1
+        while end > start:
+            if height[end] >= height[start]:
+                res = max(res, (end - start) * min(height[end], height[start]))
+                start += 1
+            else:
+                res = max(res, (end - start) * min(height[end], height[start]))
+                end -= 1
+        return res
+
+if __name__ == '__main__':
+    com = Solution()
+    print(com.maxArea2([1,8,6,2,5,4,8,3,7]))
 
 
 
