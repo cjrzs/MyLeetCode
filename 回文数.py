@@ -36,3 +36,20 @@ class Solution:
                 return True
             else:
                 return False
+
+    def isPalindrome2(self, x: int) -> bool:
+        """
+        2020年6月10号，今天的每日一题
+        与上次做这道题的时间时隔了五个月，终于在只看了一眼提示的情况下做了出来，呜呜呜~~~
+        :param x:
+        :return:
+        """
+        new_x = x
+        res = 0
+        if x < 0:
+            return False
+        while new_x >= 1:
+            a = new_x % 10
+            res = res * 10 + a
+            new_x = new_x // 10
+        return x == res
