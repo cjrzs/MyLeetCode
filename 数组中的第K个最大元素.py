@@ -30,7 +30,7 @@ class Solution:
             if nums[i] < pivot:
                 j += 1
                 nums[i], nums[j] = nums[j], nums[i]
-        nums[left], nums[i] = nums[i], nums[left]
+        nums[left], nums[j] = nums[j], nums[left]
         return j
 
     def findKthLargest2(self, nums: List[int], k: int) -> int:
