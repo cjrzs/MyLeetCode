@@ -24,5 +24,19 @@ class Solution:
         return res
 
 
-
-
+    def maxArea(self, height: list[int]) -> int:
+        """
+        双指针，从首尾同时开始遍历，较小的元素对应指针向前（后）移动
+        :param height: 输入的数组
+        :return:
+        """
+        last = len(height) - 1
+        start = 0
+        res = 0
+        while start < last:
+            if height[start] >= height[last]:
+                res = max(res, (last - start)*height[last])
+                last -= 1
+            else:
+                res = max(res, (last - start)*height[start])
+                start += 1
