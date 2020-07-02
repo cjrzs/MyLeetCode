@@ -33,7 +33,7 @@ class Solution:
 
         # 这一行的意思是把随机选出来的数字，放在他应在的位置上
         nums[left], nums[j] = nums[j], nums[left]
-        
+
         return j
 
     def findKthLargest2(self, nums: List[int], k: int) -> int:
