@@ -18,6 +18,14 @@ class TreeNode:
 
 class Solution:
     def hasPathSum(self, root: TreeNode, sum: int) -> bool:
+        """
+        2020.07.07的每日一题，又做了一遍
+        DFS.
+        一直向下遍历找到叶子节点，判断是否与sum相等
+        :param root:
+        :param sum:
+        :return:
+        """
         if not root:
             return False
         sum -= root.val
