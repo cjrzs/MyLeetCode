@@ -11,6 +11,8 @@ from typing import List
 class Solution:
     """
     动态规划
+    时间复杂度：O(mn),需要遍历表格一次计算dp元素的值
+    空间复杂度：O(md),二维数组的空间。每次只存储上一行dp的值可以优化到O(n)。
     """
     def minPathSum(self, grid: List[List[int]]) -> int:
         # m是横坐标，n是纵坐标
