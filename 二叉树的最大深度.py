@@ -21,7 +21,6 @@ class Solution:
     实在看不懂递归，使用下面的迭代的方法
     判断输入根节点是否空，不空则将该节点的深度和本身放入stack
     初始深度0，犹豫每次都要判断左右节点，所以限制条件stack为空才可以结束进行下一轮判断
-
     """
     def maxDepth(self, root: TreeNode) -> int:
         stack = []
@@ -36,7 +35,18 @@ class Solution:
                 stack.append((current_depth + 1, root.right))
         return depth
 
-
+    def maxDepth2(self, root: TreeNode) -> int:
+        """
+        递归方法。
+        :param root:
+        :return:
+        """
+        if not root:
+            return 0
+        else:
+            left = self.maxDepth(root.left)
+            right = self.maxDepth(root.right)
+            return max(left, right) + 1
 # if __name__ == '__main__':
 #     com = Solution()
 #     res = com.maxDepth(TreeNode("[3,9,20,null,null,15,7]"))
