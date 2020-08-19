@@ -40,6 +40,32 @@ class Solution:
                 return False
         return len(stack) == 1
 
+    def isValid2(self, s: str) -> bool:
+        """
+        使用闭合括号做为key，来简化判断
+        时间复杂度:O(n) 要遍历一遍所有字符传
+        空间复杂度:O(n+6) n是栈所用的空间 6是hash映射所用的空间，共有6种不同字符
+        :param s:
+        :return:
+        """
+        brackets = {'}': '{', ')': '(', ']': '['}
+        stack = []
+        n = len(s)
+        if n % 2 != 0:
+            return False
+
+        for i in s:
+            # 判断字符是否在映射的key中，如果不在需要加入
+            if i in brackets:
+                # 在映射中则该括号是闭合括号，我们看他的值是否与之对应的前括号，不是得话则False
+                if not stack or stack[-1] != brackets[i]:
+                    return False
+                # 是的话则与最后一个字符组成一对，将最后一个字符弹出去
+                stack.pop()
+            else:
+                stack.append(i)
+        return not stack
+
 
 if __name__ == '__main__':
     str1 = "(()("
