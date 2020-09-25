@@ -68,9 +68,12 @@ class Solution:
         return ans
 
 
+a = 9453252335432530000000000000000000000000
+b = 9453252335432530000000000000000000000000
 if __name__ == '__main__':
-    com = Solution()
-    print(com.numSplits("acbadbaada"))
-
+    # com = Solution()
+    # print(com.numSplits("acbadbaada"))
+    print(id(a))
+    print(id(b))
 
 
