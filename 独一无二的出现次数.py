@@ -23,5 +23,26 @@ class Solution:
         tmp.sort()
         return tmp == val
 
+    def uniqueOccurrences2(self, arr: List[int]) -> bool:
+        """
+        两个hash。
+        :param arr:
+        :return:
+        """
+        tmp = {}
+        for i in range(len(arr)):
+            if arr[i] not in tmp:
+                tmp[arr[i]] = 1
+            else:
+                tmp[arr[i]] += 1
+        tmp2 = {}
+        for i in tmp:
+            if tmp[i] in tmp2:
+                return False
+            else:
+                tmp2[tmp[i]] = 1
+        return True
+
+
 
 
