@@ -10,6 +10,12 @@ from typing import List
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        """
+        排序
+        使用字典的get方法载入排序后相同元素。
+        :param strs:
+        :return:
+        """
         dic = {}
         for ss in strs:
             key = tuple(sorted(ss))
