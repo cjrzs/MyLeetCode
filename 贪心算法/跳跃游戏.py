@@ -19,7 +19,7 @@ class Solution:
             return False
         end = len(nums) - 1
         for i in range(len(nums) - 1, -1, -1):
-            if i + nums[i] > end:  # i + nums[i] 是当前可以到达的最大位置
+            if i + nums[i] >= end:  # i + nums[i] 是当前可以到达的最大位置
                 end = i
         return end == 0
 
