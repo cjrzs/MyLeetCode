@@ -29,8 +29,8 @@ class Solution:
                 res.append(bigger.pop(0))
             return res
 
-        return max(merge(pick_max(nums1, k), merge(pick_max(nums2), k - i)) for i in range(k + 1) if i <= len(nums1)
-                   and k - i >= len(nums2))
+        return max(merge(pick_max(nums1, k), pick_max(nums2, k - i)) for i in range(k + 1) if i <= len(nums1)
+                   and k - i <= len(nums2))
 
 
 
