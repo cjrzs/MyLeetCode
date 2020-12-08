@@ -11,6 +11,7 @@ def selection_sort(nums):
     n = len(nums)
     for i in range(n - 1):
         min_index = i
+        # 每次都要从剩下的元素中找到最小的元素，并且交换到当前位置i
         for j in range(i + 1, n):
             if nums[j] < nums[min_index]:
                 min_index = j
