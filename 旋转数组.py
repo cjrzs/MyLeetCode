@@ -67,5 +67,9 @@ class Solution:
 
 
 if __name__ == '__main__':
-    com = Solution()
-    print(com.rotate([1,2], 3))
+    nums = [1, 2, 3, 4, 5, 6, 9]
+    n, k = len(nums), 2
+    nums[:] = nums[n - k:] + nums[:n - k]
+
+    # com = Solution()
+    # com.rotate(nums, 3)
