@@ -41,6 +41,6 @@ for i in range(n):
     res = max(res, i - j + 1)
 print(res)
 
-
+enumerate
 
 
