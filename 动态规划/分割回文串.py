@@ -55,7 +55,7 @@ class Solution:
             for j in range(i, n):
                 if f[i][j]:
                     tmp.append(s[i: j + 1])
-                    dfs(i + 1)
+                    dfs(j + 1)
                     tmp.pop()
         dfs(0)
         return res
