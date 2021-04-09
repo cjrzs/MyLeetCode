@@ -2,7 +2,7 @@
 coding:utf8
 @Time : 2020/6/13 23:52
 @Author : cjr
-@File : 二分查找.py
+@File : 704. 二分查找.py
 题目链接：https://leetcode-cn.com/problems/binary-search/
 '''
 import typing
