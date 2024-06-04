@@ -10,15 +10,12 @@ coding: utf8
 class Trie:
 
     def __init__(self):
-        """
-        Initialize your data structure here.
-        """
         self.root = {}
         self.END_OF_WORD = '#'
 
     def insert(self, word: str) -> None:
         """
-        Inserts a word into the trie.
+        插入一个单词到Trie
         """
         node = self.root
         for char in word:
@@ -27,7 +24,7 @@ class Trie:
 
     def search(self, word: str) -> bool:
         """
-        Returns if the word is in the trie.
+        判断给定单词是否存在
         """
         node = self.root
         for char in word:
@@ -38,7 +35,7 @@ class Trie:
 
     def startsWith(self, prefix: str) -> bool:
         """
-        Returns if there is any word in the trie that starts with the given prefix.
+        判断以给定前缀开头的单词是否存在
         """
         node = self.root
         for char in prefix:
